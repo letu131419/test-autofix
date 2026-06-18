@@ -1,5 +1,5 @@
 import pytest
-from app import add, subtract, multiply, divide
+from app import add, subtract, multiply, divide, pow
 
 def test_add():
     assert add(2, 3) == 5
@@ -20,3 +20,16 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(5, 0)
+
+def test_pow_positive():
+    assert pow(2, 3) == 8
+    assert pow(3, 2) == 9
+    assert pow(10, 0) == 1
+
+def test_pow_zero():
+    assert pow(0, 5) == 0
+    assert pow(0, 0) == 1
+
+def test_pow_negative_base():
+    assert pow(-2, 3) == -8
+    assert pow(-2, 2) == 4
