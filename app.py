@@ -4,7 +4,7 @@ def add(a, b):
     return a + b
 
 def subtract(a, b):
-    return a + b  # BUG: should be a - b
+    return a - b  # BUG: should be a - b
 
 def multiply(a, b):
     return a * b
@@ -12,4 +12,4 @@ def multiply(a, b):
 def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
-    return a // b  # BUG: integer division instead of float
+    return a / b  # BUG: integer division instead of float
